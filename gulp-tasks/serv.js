@@ -5,7 +5,9 @@ function serv() {
     server: {
       baseDir: "./",
     },
-    browser: "chrome",
+    // browser: "chrome",
+    browser: "firefox",
+
   });
 }
 
