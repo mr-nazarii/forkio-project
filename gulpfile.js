@@ -5,12 +5,19 @@ const { images, cleanDist } = require("./gulp-tasks/images.js");
 const { serv } = require("./gulp-tasks/serv.js");
 const { watcher } = require("./gulp-tasks/watcher.js");
 const { html } = require("./gulp-tasks/html.js");
+const { fonts } = require("./gulp-tasks/fonts");
 
-exports.build = parallel(series(html, images, styles, scripts));
+exports.build = parallel(series(html, images, styles, scripts, fonts));
+
+exports.default = parallel(
+  cleanDist,
+  serv,
+  watcher,
+  series(html, images, styles, scripts, fonts));
 
 exports.dev = parallel(
   cleanDist,
   serv,
   watcher,
-  series(html, images, styles, scripts)
+  series(html, images, styles, scripts, fonts)
 );
