@@ -1,0 +1,91 @@
+.page {
+  &__header {
+    @include flex-center;
+
+    background-color: $mainGray;
+  }
+
+  &__container {
+    width: 290px;
+  }
+}
+
+.nav {
+  @include flex-center;
+  justify-content: space-between;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__logo1 {
+    display: inline-block;
+
+    &:hover {
+      fill: aliceblue;
+    }
+  }
+
+  &__logo2 {
+    color: $secondaryColor;
+    display: none;
+  }
+
+  &__logo-hover {
+    display: none;
+  }
+
+  &__list {
+    order: 1;
+    @extend %list-reset;
+    display: none;
+    position: absolute;
+    top: 105px;
+    width: 90.2%;
+    height: auto;
+  }
+
+  &__link {
+    position: relative;
+    padding: 29px 20px 21px 39px;
+    display: inline-block;
+    width: 291.9px;
+    background-color: $accentColorGray;
+    border-bottom: 2px solid $accentColorLighter;
+    color: $mainColor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+
+    &:active,
+    &:focus {
+      color: $secondaryColor;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 51px;
+        top: 14px;
+        left: 2px;
+        background-color: $secondaryColor;
+      }
+    }
+  }
+
+  &__button {
+    margin: 3px;
+    @extend %list-reset;
+  }
+}
+
+.button {
+  &__p {
+    @include button;
+
+    &:hover {
+      background-color: $mainColor;
+      color: $secondaryColor;
+    }
+  }
+}
