@@ -1,11 +1,51 @@
-.block-editor {
-}
+// --------block-editor---------------
 
 .block-editor__title {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #635c73;
+  text-align: center;
+  align-items: center;
+  padding-top: 140px;
+  margin: 0 auto;
+  max-width: 85%;
+  @media (min-width: 481px) {
+    font-size: 42px;
+    line-height: 42px;
+    max-width: 690px;
+  }
+  @media (min-width: 993px) {
+    font-size: 54px;
+    line-height: 54px;
+    max-width: 900px;
+  }
 }
 
 .block-editor__text {
   font-family: $fontLato;
+  margin: 27px auto 36px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #323232;
+  max-width: 276px;
+
+  @media (min-width: 481px) {
+    font-size: 21px;
+    line-height: 32px;
+    max-width: 690px;
+  }
+  @media (min-width: 993px) {
+    font-size: 21px;
+    line-height: 32px;
+    max-width: 900px;
+  }
 }
 
 .block-editor__buttons-list {
@@ -13,8 +53,10 @@
   display: flex;
   flex-wrap: wrap;
 
-  gap: 10px;
+  row-gap: 20px;
+  column-gap: 10px;
   justify-content: center;
+  padding-bottom: 88px;
 }
 
 .block-editor__buttons-item {
@@ -23,6 +65,7 @@
 }
 
 .block-editor__btn-link {
+  text-decoration: none;
   display: inline-block;
   background-color: #f6f8fa;
   color: #24292f;
@@ -45,6 +88,7 @@
 }
 
 .block-editor__btn-count-link {
+  text-decoration: none;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;
