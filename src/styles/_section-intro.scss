@@ -1,0 +1,111 @@
+.section-intro {
+  background: url(/dist/img/backgrund-intro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  &__wrapper {
+    @include flex-center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 50px 0 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: $mainColor;
+
+    @media (min-width: 481px) {
+      margin: 68px 0 0 0;
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    @media (min-width: 993px) {
+      margin: 80px 0 0 0;
+      font-size: 82px;
+      line-height: 82px;
+    }
+  }
+
+  &__subtitle {
+    margin: 20px 0 0 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: $secondaryColor;
+    text-align: center;
+
+    @media (min-width: 481px) {
+      font-family: $fontLato;
+      font-size: 24px;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    @media (min-width: 993px) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &__version {
+    margin: 15px 0 416px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #848e97;
+    text-transform: uppercase;
+
+    @media (min-width: 993px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  &__outside-p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    top: 20px;
+    color: #848e97;
+    @media (min-width: 481px) {
+      line-height: 16px;
+    }
+  }
+}
+
+.button {
+  &__p {
+    @include button;
+
+    &:hover {
+      background-color: $mainColor;
+      color: $secondaryColor;
+    }
+  }
+  &--bg {
+    position: relative;
+    top: 22px;
+    font-size: 18px;
+    line-height: 20px;
+
+    @media (min-width: 481px) {
+      padding: 19px 57px;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+}
+
+@media (min-width: 993px) {
+}

@@ -21,4 +21,8 @@
   border: 1px solid $secondaryColor;
   background-color: $secondaryColor;
   color: $mainColor;
+
+  @media (min-width: 481px) {
+    padding: 11px 31px;
+  }
 }
