@@ -16,12 +16,15 @@
 
   padding-top: 30px;
   padding-bottom: 30px;
+
+  &__logo {
+    display: inline-block;
+    // width: 43px;
+    // height: 41px;
+  }
+
   &__logo1 {
     display: inline-block;
-
-    &:hover {
-      fill: aliceblue;
-    }
   }
 
   &__logo2 {
