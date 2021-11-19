@@ -26,17 +26,18 @@ Forkio uses a number of modern technologies which made the work:
 - Node.js
 - HTML/CSS
 - Gulp and i'ts modules:
-  -- gulp-file-include
-  -- gulp-imagemin
-  -- gulp-uglify
-  -- gulp-concat
-  -- browser-sync
-  -- gulp-sass
-  -- gulp-sourcemaps
-  -- gulp-autoprefixer
-  -- gulp-clean-css
-  -- sass
-  -- del
+
+* gulp-file-include
+* gulp-imagemin
+* gulp-uglify
+* gulp-concat
+* browser-sync
+* gulp-sass
+* gulp-sourcemaps
+* gulp-autoprefixer
+* gulp-clean-css
+* sass
+* del
 
 ---
 
