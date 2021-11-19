@@ -13,7 +13,7 @@ document.addEventListener("click", (e) => {
   ) {
     menuBtn.addEventListener("click", () => {
       if (!menuOpen) {
-        content.style.cssText = "display: inline-block";
+        content.style.cssText = "display: flex";
         menuOpen = true;
       } else {
         content.style.removeProperty("display");
