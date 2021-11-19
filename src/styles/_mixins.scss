@@ -21,6 +21,15 @@
   border: 1px solid $secondaryColor;
   background-color: $secondaryColor;
   color: $mainColor;
+  transition: color 300ms ease-in;
+  transition: background-color 300ms ease-in;
+
+  &:hover {
+    background-color: $mainColor;
+    color: $secondaryColor;
+    transition: color 300ms ease-in;
+    transition: background-color 300ms ease-in;
+  }
 
   @media (min-width: 481px) {
     padding: 11px 31px;
