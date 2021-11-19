@@ -9,11 +9,11 @@ const { fonts } = require("./gulp-tasks/fonts");
 
 exports.build = parallel(series(html, images, styles, scripts, fonts));
 
-exports.default = parallel(
+exports.default = series(
   cleanDist,
-  serv,
-  watcher,
-  series(html, images, styles, scripts, fonts));
+  parallel(fonts, styles, images),
+  series(html, scripts),
+  parallel(serv, watcher));
 
 exports.dev = parallel(
   cleanDist,
