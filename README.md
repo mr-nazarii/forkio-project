@@ -50,6 +50,4 @@ Forkio uses a number of modern technologies which made the work:
 
 MIT
 
-**Free Software, Hell Yeah!**
-
 [leonardo da vinci]: https://en.wikipedia.org/wiki/Leonardo_da_Vinci
