@@ -2,49 +2,40 @@
 
 .block-editor__title {
   display: block;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 28px;
+  @include fontStyle(normal, bold, 26px, 28px, #635c73);
   text-transform: uppercase;
-  color: #635c73;
   text-align: center;
-  align-items: center;
   padding-top: 140px;
   margin: 0 auto;
   max-width: 85%;
   @media (min-width: 481px) {
     font-size: 42px;
     line-height: 42px;
-    max-width: 690px;
+    max-width: 90%;
   }
   @media (min-width: 993px) {
     font-size: 54px;
     line-height: 54px;
-    max-width: 900px;
+    max-width: 70%;
   }
 }
 
 .block-editor__text {
   font-family: $fontLato;
   margin: 27px auto 36px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  @include fontStyle(normal, normal, 14px, 20px, #323232);
   text-align: center;
-  color: #323232;
-  max-width: 276px;
+  max-width: 85%;
 
   @media (min-width: 481px) {
     font-size: 21px;
     line-height: 32px;
-    max-width: 690px;
+    max-width: 90%;
   }
   @media (min-width: 993px) {
     font-size: 21px;
     line-height: 32px;
-    max-width: 900px;
+    max-width: 75%;
   }
 }
 
@@ -52,13 +43,20 @@
   @extend %list-reset;
   display: flex;
   flex-wrap: wrap;
-
+  margin: 0 auto;
   row-gap: 20px;
   column-gap: 10px;
   justify-content: center;
   padding-bottom: 88px;
+  max-width: 90%;
+  @media (min-width: 481px) {
+    padding-bottom: 78px;
+    max-width: 100%;
+  }
+  @media (min-width: 993px) {
+    padding-bottom: 70px;
+  }
 }
-
 .block-editor__buttons-item {
   display: flex;
   max-width: 100%;
@@ -68,11 +66,8 @@
   text-decoration: none;
   display: inline-block;
   background-color: #f6f8fa;
-  color: #24292f;
   padding: 3px 12px;
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 500;
+  @include fontStyle(normal, 500, 12px, 20px, #24292f);
   user-select: none;
   border: 1px solid #1b1f2426;
   border-top-left-radius: 6px;
@@ -89,12 +84,9 @@
 
 .block-editor__btn-count-link {
   text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
+  @include fontStyle(normal, 600, 12px, 20px, #24292f);
   display: inline-block;
   padding: 3px 12px;
-  color: #24292f;
   background-color: #ffffff;
   border: 1px solid #1b1f2426;
   border-top-right-radius: 6px;

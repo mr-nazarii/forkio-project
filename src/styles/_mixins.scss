@@ -1,5 +1,19 @@
 %list-reset {
-   margin: 0;
-   padding-left: 0;
-   list-style: none;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin fontStyle(
+  $style: normal,
+  $weight: normal,
+  $size: 16px,
+  $height: normal,
+  $color: #000000
+) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
 }
