@@ -1,0 +1,61 @@
+.section-feedback {
+  background-image: url(/dist/img/section-feedback-bg.png);
+  background-size: 500%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #4a3b4e;
+
+  &__container {
+    @include flex-center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    padding-top: 57px;
+    padding-bottom: 53px;
+
+    margin: 0px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: $mainColor;
+    text-align: center;
+  }
+
+  &__post-desc {
+    padding: 0 25px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #a291a5;
+  }
+}
+
+.coments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 45px;
+}
+
+.post {
+  @include flex-center;
+  flex-direction: column;
+  align-items: center;
+
+  &__company-comment {
+    margin: 0;
+    padding: 27px 20px 0px 20px;
+    text-align: center;
+    font-family: Lato;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: $mainColor;
+  }
+}
