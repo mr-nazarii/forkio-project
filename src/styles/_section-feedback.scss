@@ -12,16 +12,7 @@
   }
 
   &__title {
-    padding-top: 57px;
-    padding-bottom: 53px;
-
-    margin: 0px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    color: $mainColor;
-    text-align: center;
+    @include styleTitle(57px, 53px, 85px, 88px, 108px, 75px, 36px, 44px);
   }
 
   &__post-desc {
