@@ -105,6 +105,7 @@
   @include fontStyle(normal, normal, 14px, 21px, #848e97);
   text-align: center;
   margin: 14px auto 0;
+  font-family: $fontLato;
   @media (min-width: 481px) {
     text-align: start;
   }
