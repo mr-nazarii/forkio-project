@@ -5,10 +5,8 @@
   background-repeat: no-repeat;
   background-color: #4a3b4e;
 
-  &__container {
-    @include flex-center;
-    flex-direction: column;
-    align-items: center;
+  @media (min-width: 481px) {
+    background-size: cover;
   }
 
   &__title {
@@ -16,6 +14,8 @@
   }
 
   &__post-desc {
+    display: inline-block;
+    padding-bottom: 14px;
     padding: 0 25px;
     font-family: Lato;
     font-style: normal;
@@ -24,23 +24,67 @@
     line-height: 21px;
     text-align: center;
     color: #a291a5;
+    margin-top: 37px;
+
+    @media (min-width: 481px) {
+      margin-top: 67px;
+    }
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid #645766;
+      min-width: 245px;
+      width: 100%;
+
+      height: 2px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      padding-bottom: 14px;
+
+      @media (min-width: 481px) {
+        max-width: 555px;
+      }
+      @media (min-width: 993px) {
+        max-width: 780px;
+      }
+    }
   }
 }
 
 .coments {
+  overflow-x: auto;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  overflow: hidden;
+  grid-template-columns: repeat(1, minmax(270px, 1fr));
   gap: 45px;
+  @media (min-width: 481px) {
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 993px) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 116px 83px;
+  }
 }
 
 .post {
   @include flex-center;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 
   &__company-comment {
+    padding-top: 33px;
+    padding-right: 15px;
+    padding-left: 15px;
+
     margin: 0;
-    padding: 27px 20px 0px 20px;
+    min-width: 300px;
+    max-width: 370px;
     text-align: center;
     font-family: Lato;
     font-style: italic;
