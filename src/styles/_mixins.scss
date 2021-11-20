@@ -55,17 +55,17 @@
 
 @mixin styleTitle(
   $paddingTop320,
-  $marginBotton320,
+  $marginBottom320,
   $paddingTop768,
-  $marginBotton768,
+  $marginBottom768,
   $paddingTop1200,
-  $marginBotton1200,
+  $marginBottom1200,
   $fontSizeMobile: 28px,
   $fontWeightMobile: 42px
 ) {
   @include fontStyle(normal, bold, $fontSizeMobile, $fontWeightMobile, #ffffff);
   padding-top: $paddingTop320;
-  margin: 0 auto $marginBotton320;
+  margin: 0 auto $marginBottom320;
   max-width: 95%;
   text-align: center;
 
@@ -73,13 +73,13 @@
     font-size: 42px;
     line-height: 44px;
     padding-top: $paddingTop768;
-    margin-bottom: $marginBotton768;
+    margin-bottom: $marginBottom768;
   }
   @media (min-width: 993px) {
     font-size: 48px;
     line-height: 50px;
     padding-top: $paddingTop1200;
-    margin-bottom: $marginBotton1200;
+    margin-bottom: $marginBottom1200;
     max-width: 100%;
   }
 }
