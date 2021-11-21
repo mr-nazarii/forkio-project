@@ -4,7 +4,7 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 
 function scripts() {
-  return src("./src/js/script.js")
+  return src("./src/js/*.js")
     .pipe(uglify())
     .pipe(concat("script.min.js"))
     .pipe(dest("./dist/js"))

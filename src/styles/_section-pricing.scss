@@ -1,10 +1,9 @@
 .section-pricing {
   background-color: #4b3b4e;
   @media (min-width: 481px) {
-    background: url("../img/pricing-bg.png") no-repeat center;
+    background: url("../img/pricing-bg.png") no-repeat top;
     background-size: cover;
   }
-  //   height: 100%;
 }
 
 .pricing__title {
@@ -14,24 +13,35 @@
 .pricing__items-list {
   @extend %list-reset;
   display: grid;
-  grid-template-columns: min-content;
+  grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
   align-items: center;
   row-gap: 18px;
   padding-bottom: 100px;
 
-  @media (min-width: 481px) {
+  @media (min-width: 531px) {
     justify-items: end;
-    grid-template-columns: repeat(2, min-content);
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+  @media (min-width: 611px) {
     column-gap: 25px;
     row-gap: 30px;
-    padding-bottom: 94px;
   }
+
   @media (min-width: 993px) {
-    grid-template-columns: repeat(4, min-content);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 15px;
-    padding-bottom: 150px;
+    justify-items: center;
+  }
+
+  @media (min-width: 1110px) {
+    grid-template-columns:
+      repeat(2, minmax(220px, 257px))
+      minmax(270px, 300px)
+      minmax(220px, 257px);
   }
 }
 
@@ -41,16 +51,29 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-
+  width: 100%;
+  height: 100%;
+  @media (min-width: 532px) and (max-width: 993px) {
+    &:nth-child(even) {
+      justify-self: start;
+    }
+  }
   &:not(:nth-child(3)) {
     padding-bottom: 37px;
-    width: 257px;
-    height: 457px;
+    max-width: 257px;
+    min-width: 220px;
+    max-height: 457px;
+    min-height: 420px;
     background: #ffffff1e;
+    @media (min-width: 532px) and (max-width: 580px) {
+      max-width: 220px;
+    }
   }
   &:nth-child(3) {
-    width: 300px;
-    height: 560px;
+    max-width: 300px;
+    min-width: 270px;
+    max-height: 560px;
+    min-height: 520px;
     background: #463048d7;
     padding-bottom: 47px;
   }
@@ -93,10 +116,12 @@
 .pricing__item-options {
   @extend %list-reset;
   height: 100%;
-  margin-top: 73px;
+  margin: 73px 0 5px;
+  padding: 0 5px;
   position: relative;
   @include fontStyle(normal, normal, 16px, 28px, #ffffff);
   text-transform: capitalize;
+  min-height: 78px;
   &::before {
     content: "";
     width: 60px;
@@ -110,11 +135,12 @@
   &--advised {
     line-height: 32px;
     margin-top: 91px;
+    min-height: 136px;
   }
   &--advised::before {
     top: -45px;
   }
-  @media (min-width: 481px) {
+  @media (min-width: 531px) {
     line-height: 18px;
   }
 }

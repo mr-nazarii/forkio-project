@@ -7,19 +7,16 @@ const { watcher } = require("./gulp-tasks/watcher.js");
 const { html } = require("./gulp-tasks/html.js");
 const { fonts } = require("./gulp-tasks/fonts");
 
-exports.build = parallel(
-  series(cleanDist, html, images, styles, scripts, fonts)
-);
-
-exports.default = series(
+exports.build = series(
   cleanDist,
-  parallel(fonts, styles, images),
-  series(html, scripts),
-  parallel(serv, watcher)
+  parallel(html, images, styles, scripts, fonts)
 );
+exports.dev = parallel(serv, watcher);
 
-exports.dev = parallel(
-  serv,
-  watcher,
-  series(html, images, styles, scripts, fonts)
-);
+// exports.default = series(
+//   cleanDist,
+//   parallel(fonts, styles, images),
+//   series(html, scripts),
+//   parallel(serv, watcher)
+// );
+
