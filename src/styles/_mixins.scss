@@ -1,5 +1,85 @@
 %list-reset {
-   margin: 0;
-   padding-left: 0;
-   list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin button {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 11px 18px;
+  border-radius: 40px;
+  border: 1px solid $secondaryColor;
+  background-color: $secondaryColor;
+  color: $mainColor;
+  transition: color 300ms ease-in;
+  transition: background-color 300ms ease-in;
+
+  &:hover {
+    background-color: $mainColor;
+    color: $secondaryColor;
+    transition: color 300ms ease-in;
+    transition: background-color 300ms ease-in;
+  }
+
+  @media (min-width: 481px) {
+    padding: 11px 31px;
+  }
+
+  list-style: none;
+}
+
+@mixin fontStyle(
+  $style: normal,
+  $weight: normal,
+  $size: 16px,
+  $height: normal,
+  $color: #000000
+) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin styleTitle(
+  $paddingTop320,
+  $marginBottom320,
+  $paddingTop768,
+  $marginBottom768,
+  $paddingTop1200,
+  $marginBottom1200,
+  $fontSizeMobile: 28px,
+  $fontWeightMobile: 42px
+) {
+  @include fontStyle(normal, bold, $fontSizeMobile, $fontWeightMobile, #ffffff);
+  padding-top: $paddingTop320;
+  margin: 0 auto $marginBottom320;
+  max-width: 95%;
+  text-align: center;
+
+  @media (min-width: 481px) {
+    font-size: 42px;
+    line-height: 44px;
+    padding-top: $paddingTop768;
+    margin-bottom: $marginBottom768;
+  }
+  @media (min-width: 993px) {
+    font-size: 48px;
+    line-height: 50px;
+    padding-top: $paddingTop1200;
+    margin-bottom: $marginBottom1200;
+    max-width: 100%;
+  }
 }

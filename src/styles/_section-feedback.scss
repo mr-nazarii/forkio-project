@@ -1,0 +1,126 @@
+.section-feedback {
+  background-image: url(../img/section-feedback-bg.png);
+  background-size: 500%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #4b3b4e;
+
+  @media (min-width: 481px) {
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  &__title {
+    @include styleTitle(57px, 53px, 85px, 88px, 108px, 75px, 36px, 44px);
+  }
+
+  &__post-desc {
+    display: inline-block;
+    padding-bottom: 14px;
+    padding: 0 25px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #a291a5;
+    margin-top: 37px;
+    margin-bottom: 0px;
+
+    @media (min-width: 481px) {
+      margin-top: 67px;
+    }
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid #645766;
+      min-width: 245px;
+      width: 100%;
+
+      height: 2px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+
+      @media (min-width: 481px) {
+        max-width: 555px;
+      }
+      @media (min-width: 993px) {
+        max-width: 780px;
+      }
+    }
+  }
+}
+
+.coments {
+  overflow-x: auto;
+  max-width: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(1, minmax(270px, 1fr));
+  gap: 45px;
+  @media (min-width: 481px) {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 58px 63px;
+  }
+  @media (min-width: 505px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 596px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 686px) {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 776px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 895px) {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 993px) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 116px 83px;
+  }
+
+  @media (min-width: 1135px) {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 116px 83px;
+  }
+}
+
+.post {
+  @include flex-center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__company-comment {
+    padding-top: 33px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    margin: 0;
+    min-width: 220px;
+    max-width: 370px;
+    text-align: center;
+    font-family: Lato;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: $mainColor;
+  }
+}
