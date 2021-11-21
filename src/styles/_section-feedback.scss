@@ -1,5 +1,5 @@
 .section-feedback {
-  background-image: url(/dist/img/section-feedback-bg.png);
+  background-image: url(../img/section-feedback-bg.png);
   background-size: 500%;
   background-position: top;
   background-repeat: no-repeat;
@@ -7,6 +7,7 @@
 
   @media (min-width: 481px) {
     background-size: cover;
+    background-position: bottom;
   }
 
   &__title {
@@ -25,6 +26,7 @@
     text-align: center;
     color: #a291a5;
     margin-top: 37px;
+    margin-bottom: 0px;
 
     @media (min-width: 481px) {
       margin-top: 67px;
@@ -41,7 +43,6 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 10px;
-      padding-bottom: 14px;
 
       @media (min-width: 481px) {
         max-width: 555px;
@@ -61,12 +62,41 @@
   grid-template-columns: repeat(1, minmax(270px, 1fr));
   gap: 45px;
   @media (min-width: 481px) {
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 58px 63px;
+  }
+  @media (min-width: 505px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 596px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 686px) {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 776px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 58px 63px;
+  }
+
+  @media (min-width: 895px) {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 58px 63px;
   }
 
   @media (min-width: 993px) {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 116px 83px;
+  }
+
+  @media (min-width: 1135px) {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 116px 83px;
   }
 }
@@ -83,7 +113,7 @@
     padding-left: 15px;
 
     margin: 0;
-    min-width: 300px;
+    min-width: 220px;
     max-width: 370px;
     text-align: center;
     font-family: Lato;
