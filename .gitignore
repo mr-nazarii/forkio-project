@@ -9,7 +9,6 @@
 *.7z
 node_modules/
 package-lock.json
-dist/
 *.log
 .gitkeep
 *.gitkeep
